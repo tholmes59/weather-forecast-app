@@ -23,7 +23,7 @@ const PageContainer = () => {
         <div>
             Contains form and display
             <SearchForm  getWeatherInfo={fetchWeatherData}/>
-           
+            <WeatherDisplay weather={weather.data}/>
         </div>
     )
 }
