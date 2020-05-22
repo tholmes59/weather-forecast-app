@@ -1,12 +1,13 @@
 import React from 'react'
 
 
-const WeatherDisplay = () => {
-
+const WeatherDisplay = (props) => {
 
     return (
         <div>
-            Weather Data
+            
+            <p>{props.city && props.country && props.city + ', ' + props.country}</p>
+            
         </div>
     )
 }
