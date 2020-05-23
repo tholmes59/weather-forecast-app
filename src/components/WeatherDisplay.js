@@ -5,8 +5,8 @@ const WeatherDisplay = (props) => {
 
     return (
         <div>
-            
-            <p>{props.city && props.country && props.city + ', ' + props.country}</p>
+            {console.log(props)}
+            <p>{props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>
             
         </div>
     )
