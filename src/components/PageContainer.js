@@ -10,8 +10,10 @@ const PageContainer = () => {
     const API_KEY = process.env.REACT_APP_APIKEY;
 
     async function fetchWeatherData(e) {
+        let city = e.target.elements.city.value;
+        let country = e.target.elements.country.value;
         e.preventDefault()
-        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${API_KEY}`)
+        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`)
         .then(res => res.json())
         .then(data => data)
         setWeather({
@@ -21,7 +23,6 @@ const PageContainer = () => {
 
     return (
         <div>
-            Contains form and display
             <SearchForm  getWeatherInfo={fetchWeatherData}/>
             <WeatherDisplay weather={weather.data}/>
         </div>
