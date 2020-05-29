@@ -14,14 +14,16 @@ const PageContainer = () => {
         let city = e.target.elements.city.value;
         let country = e.target.elements.country.value;
         e.preventDefault()
+        e.target.reset()
         const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`)
         .then(res => res.json())
         .then(data => data)
         setWeather({
             data: weatherData
         })
-        setViewWeather(!viewWeather)
+        setViewWeather(!viewWeather);
     }
+    
 
     return (
         <div>
