@@ -14,7 +14,7 @@ const WeatherDisplay = (props) => {
             <p>Max Temp: {props.weather && props.weather.main.temp_max}</p>
             <p>Min Temp: {props.weather && props.weather.main.temp_min}</p>
             <p>Wind: {props.weather && props.weather.wind.speed}</p>
-            
+            <p>Gusts: {props.weather && props.weather.wind.gust}</p>
         </div>
     )
 }
