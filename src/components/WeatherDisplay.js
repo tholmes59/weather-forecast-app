@@ -15,6 +15,7 @@ const WeatherDisplay = (props) => {
             <p>Min Temp: {props.weather && props.weather.main.temp_min}</p>
             <p>Wind: {props.weather && props.weather.wind.speed}</p>
             <p>Gusts: {props.weather && props.weather.wind.gust}</p>
+            <p>Description {props.weather && props.weather.weather[0].description}</p>
         </div>
     )
 }
