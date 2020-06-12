@@ -19,7 +19,7 @@ const WeatherDisplay = (props) => {
             <p>Max Temp: {props.weather && (props.weather.main.temp_max * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.temp_max - 273.15).toFixed(0)}°C</p>
             <p>Min Temp: {props.weather && (props.weather.main.temp_min  * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.temp_min  - 273.15).toFixed(0)}°C</p>
             <p>Wind: {props.weather && (props.weather.wind.speed * 2.237).toFixed(0)} mph</p>
-            <p></p>
+            <p>Direction: {props.weather && props.weather.wind.deg}</p>
             <p>Gusts: {props.weather && (props.weather.wind.gust * 2.237).toFixed(0)} mph</p>
             <p>Description {props.weather && props.weather.weather[0].description}</p>
         </div>
