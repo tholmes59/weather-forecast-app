@@ -1,7 +1,12 @@
 import React from 'react';
-
+import clouds from '../assets/cloudy.png'
 
 const WeatherDisplay = (props) => {
+
+    let weatherImg;
+    if((props.weather && props.weather.weather[0].main) === "Clouds"){
+        weatherImg = <img src={clouds} alt="Clouds"/>
+    }
 
     const degToCompass = (num) => {
         var val = Math.floor((num / 22.5) + 0.5);
@@ -22,6 +27,7 @@ const WeatherDisplay = (props) => {
             <p>Direction: {props.weather && degToCompass(props.weather.wind.deg)}</p>
             <p>Gusts: {props.weather && (props.weather.wind.gust * 2.237).toFixed(0)} mph</p>
             <p>Description {props.weather && props.weather.weather[0].description}</p>
+            {weatherImg}
         </div>
     )
 }
