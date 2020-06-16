@@ -1,11 +1,14 @@
 import React from 'react';
 import clouds from '../assets/cloudy.png'
+import rain from '../assets/rain.jpg'
 
 const WeatherDisplay = (props) => {
 
     let weatherImg;
     if((props.weather && props.weather.weather[0].main) === "Clouds"){
         weatherImg = <img src={clouds} alt="Clouds"/>
+    } else if ((props.weather && props.weather.weather[0].main) === "Rain"){
+        weatherImg = <img src={rain} alt="Rain"/>
     }
 
     const degToCompass = (num) => {
