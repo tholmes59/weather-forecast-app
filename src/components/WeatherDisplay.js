@@ -1,6 +1,7 @@
 import React from 'react';
 import clouds from '../assets/cloudy.png'
 import rain from '../assets/rain.jpg'
+import clear from '../assets/sunny.jpg';
 
 const WeatherDisplay = (props) => {
 
@@ -9,7 +10,10 @@ const WeatherDisplay = (props) => {
         weatherImg = <img src={clouds} alt="Clouds"/>
     } else if ((props.weather && props.weather.weather[0].main) === "Rain"){
         weatherImg = <img src={rain} alt="Rain"/>
+    } else if ((props.weather && props.weather.weather[0].main) === "Clear"){
+        weatherImg = <img src={clear} alt="Clear"/>
     }
+
 
     const degToCompass = (num) => {
         var val = Math.floor((num / 22.5) + 0.5);
