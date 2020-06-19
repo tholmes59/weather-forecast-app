@@ -36,7 +36,7 @@ const WeatherDisplay = (props) => {
             <p>Gusts: {props.weather && (props.weather.wind.gust * 2.237).toFixed(0)} mph</p>
             <p>Description {props.weather && props.weather.weather[0].description}</p>
             {/* <img src={image} alt=""/> */}
-            {/* {weatherImg} */}
+            {weatherImg}
         </div>
     )
 }
