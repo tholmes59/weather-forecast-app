@@ -6,7 +6,6 @@ const SearchForm = (props) => {
 
         return(
             <div>
-                Form
                 <form onSubmit={props.getWeatherInfo}>
                     <input type='text' placeholder="Paris" name='city' />
                     <input type="text" placeholder='Fr' name="country" />
