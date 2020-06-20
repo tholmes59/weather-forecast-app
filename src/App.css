@@ -1,4 +1,15 @@
-.App {
-  text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
+  
 }
 
+body {
+  font-family: 'Sintony', sans-serif !important;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  margin: 1rem;
+}
