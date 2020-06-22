@@ -5,10 +5,10 @@ const SearchForm = (props) => {
     
 
         return(
-            <div>
+            <div class="search-form">
                 <form onSubmit={props.getWeatherInfo}>
-                    <input type='text' placeholder="Paris" name='city' />
-                    <input type="text" placeholder='Fr' name="country" />
+                    <input type='text' placeholder="Paris" name='city' /><br/>
+                    <input type="text" placeholder='Fr' name="country" /><br/>
                     <input value="Search" type="submit" />
                 </form>
             </div>
