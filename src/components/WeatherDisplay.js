@@ -22,11 +22,12 @@ const WeatherDisplay = (props) => {
         return arr[(val % 16)];
     } 
 
-    const [farenheight, setFarenheight] = useState(false)
-    const [celcius, setCelcius] = useState(false)
+    // const [farenheight, setFarenheight] = useState(false)
+    // const [celcius, setCelcius] = useState(false)
 
     return (
         <div>
+            <button type="">°F</button> | <button type="">°C</button>
             {console.log(props)}
             <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>
             <p>Temp: {props.weather && (props.weather.main.temp * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.temp - 273.15).toFixed(0)}°C</p> <img src={image} alt=""/>
