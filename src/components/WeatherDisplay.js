@@ -22,8 +22,8 @@ const WeatherDisplay = (props) => {
         return arr[(val % 16)];
     } 
 
-    // const [farenheight, setFarenheight] = useState(false)
-    // const [celcius, setCelcius] = useState(false)
+    const [fahrenheit, setFahrenheit] = useState(false)
+    const [celsius, setCelsius] = useState(false)
 
     return (
         <div>
