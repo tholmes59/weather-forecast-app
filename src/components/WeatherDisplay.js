@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clouds from '../assets/cloudy.png'
 import rain from '../assets/rain.jpg'
 import clear from '../assets/sunny.jpg';
@@ -21,6 +21,9 @@ const WeatherDisplay = (props) => {
         var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
         return arr[(val % 16)];
     } 
+
+    const [farenheight, setFarenheight] = useState(false)
+    const [celcius, setCelcius] = useState(false)
 
     return (
         <div>
