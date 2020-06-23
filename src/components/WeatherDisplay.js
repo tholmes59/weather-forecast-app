@@ -3,6 +3,7 @@ import clouds from '../assets/cloudy.png'
 import rain from '../assets/rain.jpg'
 import clear from '../assets/sunny.jpg';
 import Fahrenheit from './Fahrenheit'
+import Celsius from './Celsius'
 
 const WeatherDisplay = (props) => {
 
@@ -26,11 +27,20 @@ const WeatherDisplay = (props) => {
     const [fahrenheit, setFahrenheit] = useState(true)
     const [celsius, setCelsius] = useState(false)
 
+    const viewTemp = (e) => {
+        e.preventDefault()
+        setFahrenheit(!fahrenheit)
+        setCelsius(!celsius)
+    } 
+
+
     return (
         <div>
-            <button type="">°F</button> | <button type="">°C</button>
+            <button onClick={viewTemp}>°F/°C</button> 
             {console.log(props)}
             <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>
+            {fahrenheit ? <Fahrenheit /> : ''}
+            {celsius ? <Celsius/> : ''}
             <p>Temp: {props.weather && (props.weather.main.temp * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.temp - 273.15).toFixed(0)}°C</p> <img src={image} alt=""/>
             <p>Feels Like: {props.weather && (props.weather.main.feels_like * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.feels_like - 273.15).toFixed(0)}°C</p>
             <p>Max Temp: {props.weather && (props.weather.main.temp_max * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.temp_max - 273.15).toFixed(0)}°C</p>
