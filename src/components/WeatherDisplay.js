@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import clouds from '../assets/cloudy.png'
 import rain from '../assets/rain.jpg'
 import clear from '../assets/sunny.jpg';
+import Fahrenheit from './Fahrenheit'
 
 const WeatherDisplay = (props) => {
 
@@ -22,7 +23,7 @@ const WeatherDisplay = (props) => {
         return arr[(val % 16)];
     } 
 
-    const [fahrenheit, setFahrenheit] = useState(false)
+    const [fahrenheit, setFahrenheit] = useState(true)
     const [celsius, setCelsius] = useState(false)
 
     return (
