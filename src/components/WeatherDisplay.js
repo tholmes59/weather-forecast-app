@@ -39,8 +39,8 @@ const WeatherDisplay = (props) => {
             <button onClick={viewTemp}>°F/°C</button> 
             {console.log(props)}
             <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>
-            {fahrenheit ? <Fahrenheit /> : ''}
-            {celsius ? <Celsius/> : ''}
+            {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
+            {celsius ? <Celsius weather={props.weather}/> : ''}
             <p>Temp: {props.weather && (props.weather.main.temp * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.temp - 273.15).toFixed(0)}°C</p> <img src={image} alt=""/>
             <p>Feels Like: {props.weather && (props.weather.main.feels_like * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.feels_like - 273.15).toFixed(0)}°C</p>
             <p>Max Temp: {props.weather && (props.weather.main.temp_max * (9/5)-459.67).toFixed(0)}°F / {props.weather && (props.weather.main.temp_max - 273.15).toFixed(0)}°C</p>
