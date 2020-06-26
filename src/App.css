@@ -14,8 +14,13 @@ body {
   margin: 1rem;
 }
 
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
 .search-form input{
-  border-radius: 5px;
-  margin: .5rem 0;
+  border-radius: 10px;
+  margin: .5rem .2rem;
   height: 1.2rem;
 }
