@@ -16,7 +16,7 @@ body {
 
 .search-form {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .search-form input{
