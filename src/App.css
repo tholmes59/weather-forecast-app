@@ -24,3 +24,11 @@ body {
   margin: .5rem .2rem;
   height: 1.2rem;
 }
+
+.city {
+  width: 9rem;
+}
+
+.country {
+  width: 7rem;
+}
