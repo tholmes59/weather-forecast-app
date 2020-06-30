@@ -19,6 +19,12 @@ body {
   justify-content: left;
 }
 
+.search-form form {
+  padding: .5rem;
+  border: white solid;
+  box-shadow: 1px 1px whitesmoke;
+}
+
 .search-form input{
   border-radius: 10px;
   margin: .5rem .2rem;
