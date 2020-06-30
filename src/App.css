@@ -20,7 +20,7 @@ body {
 }
 
 .search-form form {
-  padding: .5rem;
+  padding: .7rem;
   border: white solid;
   box-shadow: 1px 1px whitesmoke;
 }
@@ -29,6 +29,15 @@ body {
   border-radius: 10px;
   margin: .5rem .2rem;
   height: 1.2rem;
+}
+
+.search-form button {
+  border-radius: 10px;
+  margin: .5rem .2rem;
+  /* height: 1.2rem; */
+  padding: 3px 10px;
+  color: whitesmoke;
+  background-color: lightsalmon;
 }
 
 .city {
