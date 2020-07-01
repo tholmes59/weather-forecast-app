@@ -18,9 +18,17 @@ const PageContainer = () => {
         const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`)
         .then(res => res.json())
         .then(data => data)
-        setWeather({
-            data: weatherData
-        })
+        if(city && country){
+            setWeather({
+                data: weatherData,
+                error: ""
+            })
+        } else {
+            setWeather({
+                data: "",
+                error: "Please enter a city and country"
+            })
+        }
         setViewWeather(!viewWeather);
     }
     
@@ -28,7 +36,7 @@ const PageContainer = () => {
     return (
         <div>
             <SearchForm  getWeatherInfo={fetchWeatherData}/>
-            {viewWeather ? <WeatherDisplay weather={weather.data} /> : ''}
+            {viewWeather ? <WeatherDisplay weather={weather.data} error={weather.error}/> : ''}
         </div>
     )
 }
