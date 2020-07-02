@@ -22,7 +22,7 @@ body {
 .search-form form {
   padding: .7rem;
   border: white solid;
-  box-shadow: 1px 1px whitesmoke;
+  box-shadow: 5px 10px 18px whitesmoke;
 }
 
 .search-form input{
