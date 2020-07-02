@@ -43,7 +43,7 @@ const WeatherDisplay = (props) => {
             {celsius ? <Celsius weather={props.weather}/> : ''}
            
             {props.weather &&  <p>Humidity: {props.weather.main.humidity}%</p>}
-            <p>Wind: {props.weather && (props.weather.wind.speed * 2.237).toFixed(0)} mph</p>
+            {props.weather && <p>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</p>} 
             <p>Direction: {props.weather && degToCompass(props.weather.wind.deg)}</p>
             <p>Gusts: {props.weather && (props.weather.wind.gust * 2.237).toFixed(0)} mph</p>
             <p>Description {props.weather && props.weather.weather[0].description}</p>
