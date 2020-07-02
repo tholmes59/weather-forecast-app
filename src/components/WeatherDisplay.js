@@ -37,7 +37,7 @@ const WeatherDisplay = (props) => {
     return (
         <div>
             {console.log(props)}
-            <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>
+            {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>}
             <button onClick={viewTemp}>°F/°C</button> 
             {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
             {celsius ? <Celsius weather={props.weather}/> : ''}
