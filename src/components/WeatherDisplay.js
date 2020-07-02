@@ -16,8 +16,8 @@ const WeatherDisplay = (props) => {
         weatherImg = <img src={clear} alt="Clear"/>
     }
 
-    let imageId = props.weather && props.weather.weather[0].icon
-    let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`
+    // let imageId = props.weather && props.weather.weather[0].icon
+    // let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`
     const degToCompass = (num) => {
         var val = Math.floor((num / 22.5) + 0.5);
         var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
@@ -42,7 +42,7 @@ const WeatherDisplay = (props) => {
             {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
             {celsius ? <Celsius weather={props.weather}/> : ''}
            
-            <p>Humidity: {props.weather && props.weather.main.humidity}%</p>
+            {props.weather &&  <p>Humidity: {props.weather.main.humidity}%</p>}
             <p>Wind: {props.weather && (props.weather.wind.speed * 2.237).toFixed(0)} mph</p>
             <p>Direction: {props.weather && degToCompass(props.weather.wind.deg)}</p>
             <p>Gusts: {props.weather && (props.weather.wind.gust * 2.237).toFixed(0)} mph</p>
