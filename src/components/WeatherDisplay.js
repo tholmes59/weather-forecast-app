@@ -33,18 +33,17 @@ const WeatherDisplay = (props) => {
         setCelsius(!celsius)
     } 
 
-
     return (
         <div>
             {console.log(props)}
             {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>}
-            {props.weather &&<button onClick={viewTemp}>°F/°C</button> }
+            {props.weather && <button onClick={viewTemp}>°F/°C</button> }
             {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
             {celsius ? <Celsius weather={props.weather}/> : ''}
            
-            {props.weather &&  <p>Humidity: {props.weather.main.humidity}%</p>}
+            {props.weather && <p>Humidity: {props.weather.main.humidity}%</p>}
             {props.weather && <p>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</p>} 
-            {props.weather &&  <p>Direction: {degToCompass(props.weather.wind.deg)}</p>}
+            {props.weather && <p>Direction: {degToCompass(props.weather.wind.deg)}</p>}
             {props.weather && <p>Gusts: {(props.weather.wind.gust * 2.237).toFixed(0)} mph</p>}
             {props.weather && <p>Description: {props.weather.weather[0].description}</p>}
             {/* <img src={image} alt=""/> */}
