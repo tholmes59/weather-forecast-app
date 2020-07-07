@@ -8,7 +8,7 @@ const Celsius = (props) => {
     return(
         <div>
             {props.weather && <p>Temp: {(props.weather.main.temp - 273.15).toFixed(0)}°C</p>} <img src={image} alt=""/>
-            <p>Feels Like: {props.weather && (props.weather.main.feels_like - 273.15).toFixed(0)}°C</p>
+            {props.weather && <p>Feels Like: {(props.weather.main.feels_like - 273.15).toFixed(0)}°C</p>}
             <p>Max Temp: {props.weather && (props.weather.main.temp_max - 273.15).toFixed(0)}°C</p>
             <p>Min Temp: {props.weather && (props.weather.main.temp_min  - 273.15).toFixed(0)}°C</p>
         </div>
