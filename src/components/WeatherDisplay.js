@@ -40,8 +40,6 @@ const WeatherDisplay = (props) => {
         }
     } 
 
-    
-
     return (
         <div>
             {console.log(props)}
