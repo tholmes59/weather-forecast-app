@@ -31,13 +31,22 @@ const WeatherDisplay = (props) => {
         e.preventDefault()
         setFahrenheit(!fahrenheit)
         setCelsius(!celsius)
+
+        let elm = document.getElementById("temp")
+        if(elm.innerHTML === "°C"){
+            elm.innerHTML = "°F"
+        } else {
+            elm.innerHTML = "°C"
+        }
     } 
+
+    
 
     return (
         <div>
             {console.log(props)}
             {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>}
-            {props.weather && <button onClick={viewTemp}>°F/°C</button> }
+            {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
             {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
             {celsius ? <Celsius weather={props.weather}/> : ''}
            
