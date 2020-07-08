@@ -55,6 +55,7 @@ const WeatherDisplay = (props) => {
             {props.weather && <p>Description: {props.weather.weather[0].description}</p>}
             {/* <img src={image} alt=""/> */}
             {weatherImg}
+            {props.error && <p>{props.error}</p>}
         </div>
     )
 }
