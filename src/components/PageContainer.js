@@ -36,7 +36,8 @@ const PageContainer = () => {
     return (
         <div>
             <SearchForm  getWeatherInfo={fetchWeatherData}/>
-            {viewWeather ? <WeatherDisplay weather={weather.data} error={weather.error}/> : ''}
+            {/* {viewWeather ? <WeatherDisplay weather={weather.data} error={weather.error}/> : ''} */}
+            <WeatherDisplay weather={weather.data} error={weather.error}/>
         </div>
     )
 }
