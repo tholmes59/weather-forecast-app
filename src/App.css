@@ -50,6 +50,15 @@ body {
 
 .fahrenheit-celsius-container{
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.fahrenheit-celsius-container > p {
+  width: 50%;
+}
+
+.fahrenheit-celsius-container > img {
+  width: 10rem;
+  height: 10rem;
 }
