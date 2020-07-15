@@ -69,3 +69,8 @@ body {
   width: 10rem;
   margin: .5rem;
 }
+
+.temp-button {
+  border: none;
+  background: none;
+}
