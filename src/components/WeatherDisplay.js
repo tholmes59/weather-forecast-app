@@ -16,8 +16,8 @@ const WeatherDisplay = (props) => {
     //     weatherImg = <img src={clear} alt="Clear"/>
     // }
 
-    // let imageId = props.weather && props.weather.weather[0].icon
-    // let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`
+    let imageId = props.weather && props.weather.weather[0].icon
+    let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`
     const degToCompass = (num) => {
         var val = Math.floor((num / 22.5) + 0.5);
         var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
@@ -54,8 +54,8 @@ const WeatherDisplay = (props) => {
             {props.weather && <p>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</p>} 
             {props.weather && <p>Direction: {degToCompass(props.weather.wind.deg)}</p>}
             {props.weather && <p>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </p>}
+            <img src={image} alt=""/>
             {props.weather && <p>Description: {props.weather.weather[0].description}</p>}
-            {/* <img src={image} alt=""/> */}
             {/* {weatherImg} */}
             {props.error && <p>{props.error}</p>}
         </div>
