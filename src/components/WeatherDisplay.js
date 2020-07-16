@@ -18,11 +18,16 @@ const WeatherDisplay = (props) => {
 
     let imageId = props.weather && props.weather.weather[0].icon
     let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`
-    const degToCompass = (num) => {
-        var val = Math.floor((num / 22.5) + 0.5);
-        var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-        return arr[(val % 16)];
-    } 
+    // const degToCompass = (num) => {
+    //     var val = Math.floor((num / 22.5) + 0.5);
+    //     var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    //     return arr[(val % 16)];
+    // } 
+
+    const degToCompass = (angle) => {
+        const directions = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
+        return directions[Math.round(angle / 45) % 8];
+    }
 
     const [fahrenheit, setFahrenheit] = useState(true)
     const [celsius, setCelsius] = useState(false)
