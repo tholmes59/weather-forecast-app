@@ -46,7 +46,7 @@ const WeatherDisplay = (props) => {
     } 
 
     return (
-        <div>
+        <div className="weather-display-container">
             {console.log(props)}
             {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>}
             <div className="temp-button-container">
