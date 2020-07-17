@@ -59,8 +59,10 @@ const WeatherDisplay = (props) => {
             {props.weather && <p>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</p>} 
             {props.weather && <p>Direction: {degToCompass(props.weather.wind.deg)}</p>}
             {props.weather && <p>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </p>}
-            <img src={image} alt=""/>
-            {props.weather && <p>Description: {props.weather.weather[0].description}</p>}
+            <div className="description-container">
+                <img src={image} alt=""/>
+                {props.weather && <p>Description: {props.weather.weather[0].description}</p>}    
+            </div>
             {/* {weatherImg} */}
             {props.error && <p>{props.error}</p>}
         </div>
