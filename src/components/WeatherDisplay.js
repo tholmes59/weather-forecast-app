@@ -54,12 +54,14 @@ const WeatherDisplay = (props) => {
             </div>
             {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
             {celsius ? <Celsius weather={props.weather}/> : ''}
-            <div className="wind-container">
-                {props.weather && <p>Humidity: {props.weather.main.humidity}%</p>}
-                {props.weather && <p>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</p>} 
-                {props.weather && <p>Direction: {degToCompass(props.weather.wind.deg)}</p>}
-                {props.weather && <p>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </p>}    
-            </div>
+            {props.weather && 
+                <div className="wind-container">
+                    {props.weather && <p>Humidity: {props.weather.main.humidity}%</p>}
+                    {props.weather && <p>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</p>} 
+                    {props.weather && <p>Direction: {degToCompass(props.weather.wind.deg)}</p>}
+                    {props.weather && <p>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </p>}    
+                </div>
+            }
             <div className="description-container">
                 <img src={image} alt=""/>
                 {props.weather && <p>Description: {props.weather.weather[0].description}</p>}    
