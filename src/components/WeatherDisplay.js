@@ -46,12 +46,15 @@ const WeatherDisplay = (props) => {
     } 
 
     return (
-        <div className="weather-display-container">
-            {console.log(props)}
+        <div>
             {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>}
+        
             <div className="temp-button-container">
                 {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
             </div>
+        <div className="weather-display-container">
+            {console.log(props)}
+            
             {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
             {celsius ? <Celsius weather={props.weather}/> : ''}
             {props.weather && 
@@ -70,6 +73,7 @@ const WeatherDisplay = (props) => {
             }
             {/* {weatherImg} */}
             {props.error && <p>{props.error}</p>}
+        </div>
         </div>
     )
 }
