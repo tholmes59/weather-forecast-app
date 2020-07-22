@@ -6,7 +6,7 @@ const Celsius = (props) => {
     let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`
 
     return(
-        <div>
+        <>
             {props.weather && 
                 <div className="fahrenheit-celsius-container">
                     <div className="max-min-container">
@@ -17,7 +17,7 @@ const Celsius = (props) => {
                     {props.weather && <p>Feels Like: {(props.weather.main.feels_like - 273.15).toFixed(0)}°C</p>}
                 </div>
             }
-        </div>
+        </>
     )
 }
 
