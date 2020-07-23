@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 // import clear from '../assets/sunny.jpg';
 import Fahrenheit from './Fahrenheit'
 import Celsius from './Celsius'
+import moment from 'moment';
 
 const WeatherDisplay = (props) => {
 
@@ -47,7 +48,7 @@ const WeatherDisplay = (props) => {
 
     return (
         <div>
-            {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country}</p>}
+            {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country} {moment().format('LLL')}</p>}
         
             <div className="temp-button-container">
                 {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
