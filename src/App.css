@@ -56,17 +56,23 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "temp desc" "temp wind";
   grid-column-gap: 3px;
   grid-row-gap: 3px;
 }
 
 /* **************Temp Container***************** */
 
+/* .fahrenheit-celsius-container, .description-container, .wind-container{
+  display: grid;
+} */
+
 .fahrenheit-celsius-container{
-  grid-area: 1 / 1 / 3 / 2;
+  /* grid-area: 1 / 1 / 3 / 2; */
+  grid-area: temp;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   border: solid black;
 }
 
@@ -92,11 +98,13 @@ body {
 }
 
 .description-container{
-  grid-area: 1 / 2 / 2 / 3;
+  /* grid-area: 1 / 2 / 2 / 3; */
+  grid-area: desc;
   border: solid black;
 }
 
 .wind-container{
-  grid-area: 2 / 2 / 3 / 3;
+  /* grid-area: 2 / 2 / 3 / 3; */
+  grid-area: wind;
   border: solid black;
 }
