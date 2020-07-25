@@ -10,7 +10,7 @@ const Celsius = (props) => {
             {props.weather && 
                 <div className="fahrenheit-celsius-container">
                     <div className="max-min-container">
-                        {props.weather && <span>Max Temp: {(props.weather.main.temp_max - 273.15).toFixed(0)}°C |</span>} {props.weather && <span>Min Temp: {(props.weather.main.temp_min  - 273.15).toFixed(0)}°C</span>}
+                        {props.weather && <span>{(props.weather.main.temp_max - 273.15).toFixed(0)}°C |</span>} {props.weather && <span>{(props.weather.main.temp_min  - 273.15).toFixed(0)}°C</span>}
                     </div>
                     {props.weather && <span>Temp: {(props.weather.main.temp - 273.15).toFixed(0)}°C</span>} 
                     {/* <img src={image} alt=""/> */}
