@@ -102,6 +102,10 @@ body {
   /* grid-area: 1 / 2 / 2 / 3; */
   grid-area: desc;
   border: solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .wind-container{
