@@ -60,10 +60,10 @@ const WeatherDisplay = (props) => {
             {celsius ? <Celsius weather={props.weather}/> : ''}
             {props.weather && 
                 <div className="wind-container">
-                    {props.weather && <p>Humidity: {props.weather.main.humidity}%</p>}
-                    {props.weather && <p>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</p>} 
-                    {props.weather && <p>Direction: {degToCompass(props.weather.wind.deg)}</p>}
-                    {props.weather && <p>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </p>}    
+                    {props.weather && <span>Humidity: {props.weather.main.humidity}%</span>}
+                    {props.weather && <span>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</span>} 
+                    {props.weather && <span>Direction: {degToCompass(props.weather.wind.deg)}</span>}
+                    {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}    
                 </div>
             }
             {props.weather && 
