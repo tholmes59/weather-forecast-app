@@ -50,9 +50,7 @@ const WeatherDisplay = (props) => {
         <div>
             {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country} {moment().format('LLL')}</p>}
         
-            <div className="temp-button-container">
-                {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
-            </div>
+           
         <div className="weather-display-container">
             {console.log(props)}
             
@@ -74,6 +72,9 @@ const WeatherDisplay = (props) => {
             }
             {/* {weatherImg} */}
             {props.error && <p>{props.error}</p>}
+        </div>
+        <div className="temp-button-container">
+            {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
         </div>
         </div>
     )
