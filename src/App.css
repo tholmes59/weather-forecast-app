@@ -86,6 +86,10 @@ body {
   height: 10rem;
 }
 
+.temp-main{
+  font-size: 5rem;
+}
+
 .temp-button-container {
   display: flex;
   justify-content: flex-end;
