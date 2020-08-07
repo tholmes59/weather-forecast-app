@@ -14,7 +14,7 @@ const Celsius = (props) => {
                     </div>
                     {props.weather && <span className="temp-main">{(props.weather.main.temp - 273.15).toFixed(0)}°C</span>} 
                     {/* <img src={image} alt=""/> */}
-                    {props.weather && <p>Feels Like: {(props.weather.main.feels_like - 273.15).toFixed(0)}°C</p>}
+                    {props.weather && <span>Feels Like: {(props.weather.main.feels_like - 273.15).toFixed(0)}°C</span>}
                 </div>
             }
         </>
