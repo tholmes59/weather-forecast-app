@@ -88,6 +88,12 @@ body {
 
 .temp-main{
   font-size: 5rem;
+  margin-top: .7rem;
+}
+
+.temp-main-symbol{
+  font-size: 2rem;
+  vertical-align: text-top;
 }
 
 .temp-button-container {
