@@ -93,7 +93,8 @@ body {
 
 .temp-main-symbol{
   font-size: 2rem;
-  vertical-align: text-top;
+  vertical-align: super;
+  position: relative;
 }
 
 .temp-button-container {
