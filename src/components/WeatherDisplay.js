@@ -68,7 +68,7 @@ const WeatherDisplay = (props) => {
             {props.weather && 
                 <div className="description-container">
                     <img src={image} alt=""/>
-                    {props.weather && <p>Description: {props.weather.weather[0].description}</p>}    
+                    {props.weather && <p>{props.weather.weather[0].description}</p>}    
                 </div>
             }
             {/* {weatherImg} */}
