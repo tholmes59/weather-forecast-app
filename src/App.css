@@ -88,12 +88,12 @@ body {
 }
 
 .temp-main{
-  font-size: 5rem;
+  font-size: 6rem;
   margin-top: .7rem;
 }
 
 .temp-main-symbol{
-  font-size: 2rem;
+  font-size: 3rem;
   vertical-align: super;
   position: relative;
 }
