@@ -87,9 +87,13 @@ body {
   height: 10rem;
 }
 
+.max-min-main {
+  font-size: 1.2rem;
+}
+
 .temp-main{
   font-size: 6rem;
-  margin-top: .7rem;
+  /* margin-top: .7rem; */
 }
 
 .temp-main-symbol{
