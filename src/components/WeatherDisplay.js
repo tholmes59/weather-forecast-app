@@ -48,6 +48,7 @@ const WeatherDisplay = (props) => {
 
     return (
         <div>
+            <div class="sun-container"></div>
             {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country} {moment().format('LLL')}</p>}
         
            
