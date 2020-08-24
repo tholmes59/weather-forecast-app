@@ -142,3 +142,20 @@ body {
 .wind-speed-direction-container{
 
 }
+
+
+/* ***********Sun********************* */
+
+.sun-container {
+  background-color: yellow;
+/*   border: 5px solid; */
+  width: 12rem;
+  height: 12rem;
+  border-radius: 0 0 0 100%;
+/*   bottom: 0;
+	left: 0;  */
+/* 	padding-top: 50px; */
+	position: fixed; 
+  top: 0;
+  right: 0;
+}
