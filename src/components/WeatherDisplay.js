@@ -53,7 +53,7 @@ const WeatherDisplay = (props) => {
     return (
         <div>
             <div className="sun-container"></div>
-            {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country} {moment(utc).format('LT')}</p>}
+            {props.weather && <p>{props.weather && props.weather.name + ', ' + props.weather.sys.country} - Local Time - {moment(utc).format('LT')}</p>}
             
             <div className="weather-display-container">
                 {console.log(props)}
