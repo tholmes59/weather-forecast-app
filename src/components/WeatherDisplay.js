@@ -8,7 +8,11 @@ import moment from 'moment';
 
 const WeatherDisplay = (props) => {
 
-    // let weatherImg;
+    let now = new Date();
+    let timezone = props.weather && props.weather.timezone * 1000
+    var utc = new Date((now.getTime() + timezone) + now.getTimezoneOffset() * 60000);
+      
+    
     // if((props.weather && props.weather.weather[0].main) === "Clouds"){
     //     weatherImg = <img src={clouds} alt="Clouds"/>
     // } else if ((props.weather && props.weather.weather[0].main) === "Rain"){
@@ -48,36 +52,35 @@ const WeatherDisplay = (props) => {
 
     return (
         <div>
-            <div class="sun-container"></div>
-            {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country} {moment().format('LLL')}</p>}
-        
-           
-        <div className="weather-display-container">
-            {console.log(props)}
+            <div className="sun-container"></div>
+            {props.weather && <p>Location: {props.weather && props.weather.name + ', ' + props.weather.sys.country} {moment(utc).format('LT')}</p>}
             
-            {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
-            {celsius ? <Celsius weather={props.weather}/> : ''}
-            {props.weather && 
-                <div className="wind-container">
-                    {props.weather && <span>Humidity: {props.weather.main.humidity}%</span>}
-                    <div className="wind-speed-direction-container">
-                        {props.weather && <span>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</span>} {props.weather && <span>{degToCompass(props.weather.wind.deg)}</span>} 
+            <div className="weather-display-container">
+                {console.log(props)}
+                
+                {fahrenheit ? <Fahrenheit weather={props.weather}/> : ''}
+                {celsius ? <Celsius weather={props.weather}/> : ''}
+                {props.weather && 
+                    <div className="wind-container">
+                        {props.weather && <span>Humidity: {props.weather.main.humidity}%</span>}
+                        <div className="wind-speed-direction-container">
+                            {props.weather && <span>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</span>} {props.weather && <span>{degToCompass(props.weather.wind.deg)}</span>} 
+                        </div>
+                        {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}    
                     </div>
-                    {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}    
-                </div>
-            }
-            {props.weather && 
-                <div className="description-container">
-                    <img src={image} alt=""/>
-                    {props.weather && <p>{props.weather.weather[0].description}</p>}    
-                </div>
-            }
-            {/* {weatherImg} */}
-            {props.error && <p>{props.error}</p>}
-        </div>
-        <div className="temp-button-container">
-            {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
-        </div>
+                }
+                {props.weather && 
+                    <div className="description-container">
+                        <img src={image} alt=""/>
+                        {props.weather && <p>{props.weather.weather[0].description}</p>}    
+                    </div>
+                }
+                {/* {weatherImg} */}
+                {props.error && <p>{props.error}</p>}
+            </div>
+            <div className="temp-button-container">
+                {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
+            </div>
         </div>
     )
 }
