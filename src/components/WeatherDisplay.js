@@ -66,7 +66,9 @@ const WeatherDisplay = (props) => {
                         <div className="wind-speed-direction-container">
                             {props.weather && <span>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</span>} {props.weather && <span>{degToCompass(props.weather.wind.deg)}</span>} 
                         </div>
-                        {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}    
+                        {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}
+                        {props.weather && <span>{moment(props.weather.sys.sunrise*1000).format("LT")} </span>}
+                        {/* {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}     */}
                     </div>
                 }
                 {props.weather && 
