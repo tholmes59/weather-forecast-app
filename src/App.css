@@ -14,11 +14,20 @@ body {
   margin: 1rem;
 }
 
+/* .App h1{
+  width: 15rem;
+} */
+
+/* .display-container {
+  display: inline-flex;
+} */
+
 /* **********Search From**************** */
 
 .search-form {
   display: flex;
   justify-content: left;
+  width: 50%;
 }
 
 .search-form form {
@@ -158,4 +167,71 @@ body {
 	position: fixed; 
   top: 0;
   right: 0;
+  /* z-index: -2; */
+}
+
+.line-1 {
+  background: yellow;
+  width: 4rem;
+  height: .5rem;
+  position: fixed;
+  right: 200px;
+  top: 15px;
+  transform: rotate(-5deg);
+  /* z-index: -2; */
+}
+
+.line-2 {
+  background: yellow;
+  width: 4rem;
+  height: .5rem;
+  position: fixed;
+  right: 190px;
+  top: 75px;
+  transform: rotate(-15deg);
+  /* z-index: -2; */
+}
+
+.line-3 {
+  background: yellow;
+  width: 4rem;
+  height: .5rem;
+  position: fixed;
+  right: 160px;
+  top: 135px;
+  transform: rotate(-30deg);
+  /* z-index: -2; */
+}
+
+.line-4 {
+  background: yellow;
+  width: 4rem;
+  height: .5rem;
+  position: fixed;
+  right: 115px;
+  top: 180px;
+  transform: rotate(-45deg);
+  /* z-index: -2; */
+}
+
+.line-5 {
+  background: yellow;
+  width: 4rem;
+  height: .5rem;
+  position: fixed;
+  right: 60px;
+  top: 215px;
+  transform: rotate(-70deg);
+  /* z-index: -2; */
+}
+
+.line-6 {
+  background: yellow;
+  width: 4rem;
+  height: .5rem;
+  position: fixed;
+  right: 0px;
+  top: 230px;
+  transform: rotate(-85deg);
+  /* z-index: -2; */
 }
