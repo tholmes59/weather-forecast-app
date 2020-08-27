@@ -73,8 +73,8 @@ const WeatherDisplay = (props) => {
                             {props.weather && <span>Wind: {(props.weather.wind.speed * 2.237).toFixed(0)} mph</span>} {props.weather && <span>{degToCompass(props.weather.wind.deg)}</span>} 
                         </div>
                         {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}
-                        {props.weather && <span>{moment(((props.weather.sys.sunrise*1000)+timezone) + new Date().getTimezoneOffset() * 60000).format("LT")} </span>}
-                        {props.weather && <span>{moment(((props.weather.sys.sunset*1000)+timezone) + new Date().getTimezoneOffset() * 60000).format("LT")} </span>}
+                        {props.weather && <span>Sunrise: {moment(((props.weather.sys.sunrise*1000)+timezone) + new Date().getTimezoneOffset() * 60000).format("LT")} </span>}
+                        {props.weather && <span>Sunset: {moment(((props.weather.sys.sunset*1000)+timezone) + new Date().getTimezoneOffset() * 60000).format("LT")} </span>}
                         {/* {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}     */}
  
                     </div>
