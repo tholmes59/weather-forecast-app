@@ -52,7 +52,13 @@ const WeatherDisplay = (props) => {
 
     return (
         <div>
-            <div className="sun-container"></div>
+           <div className="sun-container"></div>
+            <div className="line-1"></div>
+            <div className="line-2"></div>
+            <div className="line-3"></div>
+            <div className="line-4"></div>
+            <div className="line-5"></div>
+            <div className="line-6"></div>
             {props.weather && <p>{props.weather && props.weather.name + ', ' + props.weather.sys.country} - Local Time - {moment(utc).format('LT')}</p>}
             
             <div className="weather-display-container">
@@ -68,7 +74,8 @@ const WeatherDisplay = (props) => {
                         </div>
                         {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}
                         {props.weather && <span>{moment(props.weather.sys.sunrise*1000).format("LT")} </span>}
-                        {/* {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}     */}
+                        {props.weather && <span>{moment(props.weather.sys.sunset*1000).format("LT")} </span>}
+                        
                     </div>
                 }
                 {props.weather && 
