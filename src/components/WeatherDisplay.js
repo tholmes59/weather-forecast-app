@@ -59,7 +59,7 @@ const WeatherDisplay = (props) => {
             <div className="line-4"></div>
             <div className="line-5"></div>
             <div className="line-6"></div>
-            {props.weather && <p>{props.weather && props.weather.name + ', ' + props.weather.sys.country} - Local Time - {moment(utc).format('LT')}</p>}
+            {props.weather && <p>{props.weather && props.weather.name + ', ' + props.weather.sys.country} - Local Time - {moment(utc).format('h:mm a, MMMM Do YYYY')}</p>}
             
             <div className="weather-display-container">
                 {console.log(props)}
