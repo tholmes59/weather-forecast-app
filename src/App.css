@@ -6,11 +6,14 @@ html, body {
 
 body {
   font-family: 'Sintony', sans-serif !important;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .App {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh;
+  min-width: 100vw; */
   margin: 1rem;
 }
 
@@ -84,7 +87,7 @@ body {
   align-items: center;
   border: 1rem solid transparent;
   background: 
-      linear-gradient(to right, lightblue, lightblue), 
+      linear-gradient(to right, #00b4ff, #00b4ff), 
       linear-gradient(45deg, red ,yellow); 
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box; 
