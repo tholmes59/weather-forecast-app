@@ -134,7 +134,7 @@ body {
 .description-container{
   /* grid-area: 1 / 2 / 2 / 3; */
   grid-area: desc;
-  border: solid black;
+  /* border: solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,7 +144,7 @@ body {
 .wind-container{
   /* grid-area: 2 / 2 / 3 / 3; */
   grid-area: wind;
-  border: solid black;
+  /* border: solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
