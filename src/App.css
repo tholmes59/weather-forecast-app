@@ -139,6 +139,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 250px;
 }
 
 .wind-container{
@@ -149,6 +150,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 250px;
 }
 
 .wind-speed-direction-container{
