@@ -240,3 +240,20 @@ body {
   transform: rotate(-85deg);
   /* z-index: -2; */
 }
+
+/* ************Responsive****************** */
+
+@media only screen and (max-width: 415px){
+
+  h1{
+    font-size: 1.2em;
+  }
+  
+  .search-form form {
+    padding: .3rem;
+  }
+  
+  .search-form input{
+    margin: .2rem .1rem;
+  }
+}
