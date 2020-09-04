@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #00b4ff;
+  box-sizing: border-box;
 }
 
 body {
@@ -255,5 +256,11 @@ body {
   
   .search-form input{
     margin: .2rem .1rem;
+  }
+
+  .weather-display-container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    grid-template-areas: "temp temp" "desc wind";
   }
 }
