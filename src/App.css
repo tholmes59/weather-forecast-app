@@ -3,12 +3,13 @@ html, body {
   padding: 0;
   background: #00b4ff;
   box-sizing: border-box;
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 body {
   font-family: 'Sintony', sans-serif !important;
-  min-height: 100vh;
-  min-width: 100vw;
+  
 }
 
 .App {
