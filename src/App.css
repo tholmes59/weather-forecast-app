@@ -264,4 +264,69 @@ body {
     grid-template-rows: repeat(2, 300px);
     grid-template-areas: "temp temp" "desc wind";
   }
+
+  .sun-container {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .line-1 {
+    width: 2rem;
+    height: .3rem;
+    position: fixed;
+    right: 200px;
+    top: 15px;
+    transform: rotate(-5deg);
+    /* z-index: -2; */
+  }
+  
+  .line-2 {
+    width: 2rem;
+    height: .3rem;
+    position: fixed;
+    right: 190px;
+    top: 75px;
+    transform: rotate(-15deg);
+    /* z-index: -2; */
+  }
+  
+  .line-3 {
+    width: 2rem;
+    height: .3rem;
+    position: fixed;
+    right: 160px;
+    top: 135px;
+    transform: rotate(-30deg);
+    /* z-index: -2; */
+  }
+  
+  .line-4 {
+    width: 2rem;
+    height: .3rem;
+    position: fixed;
+    right: 115px;
+    top: 180px;
+    transform: rotate(-45deg);
+    /* z-index: -2; */
+  }
+  
+  .line-5 {
+    width: 2rem;
+    height: .3rem;
+    position: fixed;
+    right: 60px;
+    top: 215px;
+    transform: rotate(-70deg);
+    /* z-index: -2; */
+  }
+  
+  .line-6 {
+    width: 2rem;
+    height: .3rem;
+    position: fixed;
+    right: 0px;
+    top: 230px;
+    transform: rotate(-85deg);
+    /* z-index: -2; */
+  }
 }
