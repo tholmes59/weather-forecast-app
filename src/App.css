@@ -260,8 +260,8 @@ body {
   }
 
   .weather-display-container{
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(2, 10rem);
+    grid-template-rows: repeat(2, 275px);
     grid-template-areas: "temp temp" "desc wind";
   }
 
