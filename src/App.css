@@ -265,6 +265,23 @@ body {
     grid-template-areas: "temp temp" "desc wind";
   }
 
+  .max-min-main {
+    font-size: .9rem;
+  }
+  
+  .temp-main{
+    font-size: 4.5rem;
+    /* margin-top: .7rem; */
+  }
+  
+  .temp-main-symbol{
+    font-size: 2rem;
+  }
+
+  .temp-main-feels-like{
+    font-size: .9rem;
+  }
+
   .sun-container {
     width: 5rem;
     height: 5rem;
