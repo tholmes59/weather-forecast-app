@@ -282,6 +282,14 @@ body {
     font-size: .9rem;
   }
 
+  .description-container{
+    width: 10rem;
+  }
+
+  .wind-container{
+    width: 10rem;
+  }
+
   .sun-container {
     width: 5rem;
     height: 5rem;
