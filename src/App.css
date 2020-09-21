@@ -305,10 +305,26 @@ body {
   
   .search-form form {
     padding: .3rem;
+    height: 130px;
+    width: 300px;
+  }
+
+  .search-form form::after{
+    height: 90px;
+    width: 90px;
+    left: 50px;
+	  top: -30px;
+  }
+
+  .search-form form::before{
+    height: 150px;
+    width: 150px;
+    right: 40px;
+	  top: -70px;
   }
   
-  .search-form input{
-    margin: .2rem .1rem;
+  .input-container{
+    margin: .2rem 2.5rem;
   }
 
   .weather-display-container{
