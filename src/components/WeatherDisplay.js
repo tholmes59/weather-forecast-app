@@ -43,10 +43,10 @@ const WeatherDisplay = (props) => {
         setCelsius(!celsius)
 
         let elm = document.getElementById("temp")
-        if(elm.innerHTML === "°C"){
-            elm.innerHTML = "°F"
+        if(elm.innerHTML === "view in °C"){
+            elm.innerHTML = "view in °F"
         } else {
-            elm.innerHTML = "°C"
+            elm.innerHTML = "view in °C"
         }
     } 
 
@@ -61,6 +61,9 @@ const WeatherDisplay = (props) => {
             <div className="line-6"></div>
             {props.weather && <p>{props.weather && props.weather.name + ', ' + props.weather.sys.country} - Local Time - {moment(utc).format('h:mm a, MMMM Do YYYY')}</p>}
             
+            <div className="temp-button-container">
+                {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">view in °C</span></button> }
+            </div>
             <div className="weather-display-container">
                 {console.log(props)}
                 
@@ -87,9 +90,6 @@ const WeatherDisplay = (props) => {
                 }
                 {/* {weatherImg} */}
                 {props.error && <p>{props.error}</p>}
-            </div>
-            <div className="temp-button-container">
-                {props.weather && <button onClick={viewTemp} className="temp-button"><span id="temp">°C</span></button> }
             </div>
         </div>
     )
