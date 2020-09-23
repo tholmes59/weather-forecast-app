@@ -175,7 +175,7 @@ body {
 
 .temp-button-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: left;
   width: 10rem;
   margin: .5rem;
 }
