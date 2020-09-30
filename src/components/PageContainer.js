@@ -2,8 +2,6 @@ import React, { useState} from 'react';
 import SearchForm from './SearchForm'
 import WeatherDisplay from './WeatherDisplay'
 
-
-
 const PageContainer = () => {
    
     const [weather, setWeather] = useState([]);
@@ -32,11 +30,9 @@ const PageContainer = () => {
         setViewWeather(!viewWeather);
     }
     
-
     return (
         <div className="display-container">
             <SearchForm  getWeatherInfo={fetchWeatherData}/>
-            {/* {viewWeather ? <WeatherDisplay weather={weather.data} error={weather.error}/> : ''} */}
             <WeatherDisplay weather={weather.data} error={weather.error}/>
         </div>
     )
