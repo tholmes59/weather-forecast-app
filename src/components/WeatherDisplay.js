@@ -1,26 +1,15 @@
 import React, { useState } from 'react';
-// import clouds from '../assets/cloudy.png'
-// import rain from '../assets/rain.jpg'
-// import clear from '../assets/sunny.jpg';
-import Fahrenheit from './Fahrenheit'
-import Celsius from './Celsius'
+import Fahrenheit from './Fahrenheit';
+import Celsius from './Celsius';
 import moment from 'moment';
 
 const WeatherDisplay = (props) => {
 
     let now = new Date();
     let timezone = props.weather && props.weather.timezone * 1000
-    var utc = new Date((now.getTime() + timezone) + now.getTimezoneOffset() * 60000);
+    let utc = new Date((now.getTime() + timezone) + now.getTimezoneOffset() * 60000);
       
     
-    // if((props.weather && props.weather.weather[0].main) === "Clouds"){
-    //     weatherImg = <img src={clouds} alt="Clouds"/>
-    // } else if ((props.weather && props.weather.weather[0].main) === "Rain"){
-    //     weatherImg = <img src={rain} alt="Rain"/>
-    // } else if ((props.weather && props.weather.weather[0].main) === "Clear"){
-    //     weatherImg = <img src={clear} alt="Clear"/>
-    // }
-
     let imageId = props.weather && props.weather.weather[0].icon
     let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`
     // const degToCompass = (num) => {
@@ -78,8 +67,6 @@ const WeatherDisplay = (props) => {
                         {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}
                         {props.weather && <span>Sunrise: {moment(((props.weather.sys.sunrise*1000)+timezone) + new Date().getTimezoneOffset() * 60000).format("LT")} </span>}
                         {props.weather && <span>Sunset: {moment(((props.weather.sys.sunset*1000)+timezone) + new Date().getTimezoneOffset() * 60000).format("LT")} </span>}
-                        {/* {props.weather && <span>Gusts: {props.weather.wind.gust ? (props.weather.wind.gust * 2.237).toFixed(0) + ' mph'  : "Gusts not available"} </span>}     */}
- 
                     </div>
                 }
                 {props.weather && 
@@ -88,7 +75,6 @@ const WeatherDisplay = (props) => {
                         {props.weather && <p>{props.weather.weather[0].description}</p>}    
                     </div>
                 }
-                {/* {weatherImg} */}
                 {props.error && <p>{props.error}</p>}
             </div>
         </div>
