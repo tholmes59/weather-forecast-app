@@ -50,6 +50,7 @@ const WeatherDisplay = (props) => {
 
   return (
     <div>
+      
       <div className="sun-container"></div>
       <div className="line-1"></div>
       <div className="line-2"></div>
@@ -57,6 +58,7 @@ const WeatherDisplay = (props) => {
       <div className="line-4"></div>
       <div className="line-5"></div>
       <div className="line-6"></div>
+      
       {props.weather && (
         <p>
           {props.weather &&
