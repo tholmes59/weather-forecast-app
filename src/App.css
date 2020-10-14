@@ -5,11 +5,14 @@ html, body {
   box-sizing: border-box;
   max-height: 100vh;
   max-width: 100vw;
+  
 }
 
 body {
-  font-family: 'Sintony', sans-serif !important;
-  
+  font-family: 'Montserrat', sans-serif;
+  /* z-index: -5; */
+  position: relative;
+  z-index: -5;
 }
 
 .App {
@@ -19,10 +22,22 @@ body {
   margin: 1rem;
 }
 
+.App h1 {
+  display: inline;
+  font-family: 'Bungee Shade', cursive;
+}
+
+.display-container {
+  display: inline;
+  position: relative;
+  z-index: +3;
+}
+
 /* **********Search From**************** */
 
 .search-form {
-  display: flex;
+  display: inline-flex;
+  /* display: flex; */
   justify-content: left;
 	transform: scale(1);
   margin-top: 7rem;
@@ -55,7 +70,7 @@ body {
   background: #fff;
   content: '';
   position: absolute;
-  z-indeX: -1;
+  z-index: -1;
 }
 
 .search-form form:after {
@@ -197,6 +212,7 @@ body {
 	position: fixed; 
   top: 0;
   right: 0;
+  z-index: -2;
 }
 
 .line-1 {
@@ -207,7 +223,7 @@ body {
   right: 200px;
   top: 15px;
   transform: rotate(-5deg);
-  /* z-index: -2; */
+  z-index: -2;
 }
 
 .line-2 {
@@ -218,7 +234,7 @@ body {
   right: 190px;
   top: 75px;
   transform: rotate(-15deg);
-  /* z-index: -2; */
+  z-index: -2;
 }
 
 .line-3 {
@@ -229,7 +245,7 @@ body {
   right: 160px;
   top: 135px;
   transform: rotate(-30deg);
-  /* z-index: -2; */
+  z-index: -2;
 }
 
 .line-4 {
@@ -240,7 +256,7 @@ body {
   right: 115px;
   top: 180px;
   transform: rotate(-45deg);
-  /* z-index: -2; */
+  z-index: -2;
 }
 
 .line-5 {
@@ -251,7 +267,7 @@ body {
   right: 60px;
   top: 215px;
   transform: rotate(-70deg);
-  /* z-index: -2; */
+  z-index: -2;
 }
 
 .line-6 {
@@ -262,7 +278,7 @@ body {
   right: 0px;
   top: 230px;
   transform: rotate(-85deg);
-  /* z-index: -2; */
+  z-index: -2;
 }
 
 /* ************Responsive****************** */
@@ -385,4 +401,112 @@ body {
     right: 0px;
     top: 0px;
   }
+}
+
+
+@-webkit-keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+@-moz-keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+@keyframes animateCloud {
+  0% {
+    margin-left: -1000px;
+}
+100% {
+    margin-left: 100%;
+}
+}
+
+
+
+
+.x1 {
+	-webkit-animation: animateCloud 35s linear infinite;
+	-moz-animation: animateCloud 35s linear infinite;
+	animation: animateCloud 35s linear infinite;
+	
+	-webkit-transform: scale(0.50);
+	-moz-transform: scale(0.50);
+  transform: scale(0.50);
+  z-index: +2;
+  margin-top: 75px;
+}
+
+.x2 {
+	-webkit-animation: animateCloud 20s linear infinite;
+	-moz-animation: animateCloud 20s linear infinite;
+	animation: animateCloud 20s linear infinite;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+  transform: scale(0.3);
+  margin-top: 75px;
+  z-index: +2;
+}
+
+.cloud {
+	background: #fff;
+	background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
+	background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+	
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	
+	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+	height: 120px;
+	position: absolute;
+  width: 350px;
+  z-index: -1;
+}
+
+.cloud:after, .cloud:before {
+  background: #fff;
+	content: '';
+	position: absolute;
+	z-index: -2;
+}
+
+.cloud:after {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+	height: 100px;
+	left: 50px;
+	top: -50px;
+	width: 100px;
+}
+
+.cloud:before {
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+
+	width: 180px;
+	height: 180px;
+	right: 50px;
+	top: -90px;
 }
