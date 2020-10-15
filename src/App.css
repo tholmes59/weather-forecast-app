@@ -283,7 +283,7 @@ body {
 
 /* *****************Clouds********************** */
 
-/* @-webkit-keyframes animateCloud {
+@-webkit-keyframes animateCloud {
   0% {
       margin-left: -1000px;
   }
@@ -299,26 +299,42 @@ body {
   100% {
       margin-left: 100%;
   }
-} */
+}
 
 @keyframes animateCloud {
   0% {
     margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
 }
-100% {
-    margin-left: 100%;
+
+@-webkit-keyframes animateCloud2 {
+  0% {
+    transform: translate(-300px) scale(0.3);
+  }
+  100% {
+      transform: translate(100%) scale(0.3);
+  }
 }
+
+@-moz-keyframes animateCloud2 {
+  0% {
+    transform: translate(-300px) scale(0.3);
+  }
+  100% {
+      transform: translate(100%) scale(0.3);
+  }
 }
 
 @keyframes animateCloud2 {
   0% {
-    /* margin-left: -1000px; */
     transform: translate(-300px) scale(0.3);
-}
-100% {
-    /* margin-left: 100%; */
-    transform: translate(100%) scale(0.3);
-}
+  }
+  100% {
+      transform: translate(100%) scale(0.3);
+  }
 }
 
 .x1 {
