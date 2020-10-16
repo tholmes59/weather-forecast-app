@@ -6,12 +6,12 @@ function App() {
   return (
     <div className="App">
       <h1>What's the Weather?</h1><br/>
-      <div class="x1">
-        <div class="cloud"></div>
+      <div className="x1">
+        <div className="cloud"></div>
       </div>
 
-      <div class="x2">
-        <div class="cloud"></div>
+      <div className="x2">
+        <div className="cloud"></div>
       </div>
       
       <PageContainer />
