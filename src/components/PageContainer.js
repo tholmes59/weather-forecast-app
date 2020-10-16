@@ -6,7 +6,7 @@ const PageContainer = () => {
    
     const [weather, setWeather] = useState([]);
     const [viewWeather, setViewWeather] = useState(false)
-    const API_KEY = process.env.REACT_APP_APIKEY;
+    // const API_KEY = process.env.REACT_APP_APIKEY;
 
     async function fetchWeatherData(e) {
         let city = e.target.elements.city.value;
