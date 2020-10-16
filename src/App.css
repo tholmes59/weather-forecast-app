@@ -419,7 +419,7 @@ body {
 @media only screen and (max-width: 736px){
 
   h1{
-    font-size: 1.2em;
+    font-size: 1rem;
   }
   
   .search-form form {
@@ -540,7 +540,7 @@ body {
     -moz-animation: animateCloud2 35s linear infinite;
     animation: animateCloud2 35s linear infinite;
 
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
   .x2 {
