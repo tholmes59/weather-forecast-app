@@ -13,7 +13,8 @@ const PageContainer = () => {
         let country = e.target.elements.country.value;
         e.preventDefault()
         e.target.reset()
-        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`)
+        // const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`)
+        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=b605fb71f74a08b77774a041c8a5fa91`)
         .then(res => res.json())
         .then(data => data)
         if(city && country){
