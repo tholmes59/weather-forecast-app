@@ -10,7 +10,7 @@ const WeatherDisplay = (props) => {
     now.getTime() + timezone + now.getTimezoneOffset() * 60000
   );
 
-  let imageId = props.weather && props.weather.weather[0].icon;
+  let imageId = props.weather && props.weather.weather.map(x => x.icon);
   let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`;
   // const degToCompass = (num) => {
   //     var val = Math.floor((num / 22.5) + 0.5);
@@ -127,7 +127,7 @@ const WeatherDisplay = (props) => {
         {props.weather && (
           <div className="description-container">
             <img src={image} alt="" />
-            {props.weather && <p>{props.weather.weather[0].description}</p>}
+            {props.weather && <p>{props.weather.weather.map(x => x.description)}</p>}
           </div>
         )}
         {props.error && <p>{props.error}</p>}
