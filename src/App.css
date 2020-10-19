@@ -285,28 +285,30 @@ body {
 
 @-webkit-keyframes animateCloud {
   0% {
-      margin-left: -1000px;
+    transform: translate(-500px) scale(0.5);
   }
   100% {
-      margin-left: 100%;
+    transform: translate(100%) scale(0.5);
   }
 }
 
 @-moz-keyframes animateCloud {
   0% {
-      margin-left: -1000px;
+    transform: translate(-500px) scale(0.5);
   }
   100% {
-      margin-left: 100%;
+    transform: translate(100%) scale(0.5);
   }
 }
 
 @keyframes animateCloud {
   0% {
-    margin-left: -1000px;
+    /* margin-left: -1000px; */
+    transform: translate(-500px) scale(0.5);
   }
   100% {
-      margin-left: 100%;
+      /* margin-left: 100%; */
+      transform: translate(100%) scale(0.5);
   }
 }
 
@@ -330,33 +332,33 @@ body {
 
 @keyframes animateCloud2 {
   0% {
-    transform: translate(-300px) scale(0.3);
+    transform: translate(-500px) scale(0.3);
   }
   100% {
       transform: translate(100%) scale(0.3);
   }
 }
 
-.x1 {
+.cloud1 {
 	-webkit-animation: animateCloud 35s linear infinite;
 	-moz-animation: animateCloud 35s linear infinite;
 	animation: animateCloud 35s linear infinite;
 	
-	-webkit-transform: scale(0.50);
+	/* -webkit-transform: scale(0.50);
 	-moz-transform: scale(0.50);
-  transform: scale(0.50);
+  transform: scale(0.50); */
   z-index: +2;
   margin-top: 75px;
 }
 
-.x2 {
-	-webkit-animation: animateCloud 20s linear infinite;
-	-moz-animation: animateCloud 20s linear infinite;
-	animation: animateCloud 20s linear infinite;
+.cloud2 {
+	-webkit-animation: animateCloud2 20s linear infinite;
+	-moz-animation: animateCloud2 20s linear infinite;
+	animation: animateCloud2 20s linear infinite;
 	
-	-webkit-transform: scale(0.3);
+	/* -webkit-transform: scale(0.3);
 	-moz-transform: scale(0.3);
-  transform: scale(0.3);
+  transform: scale(0.3); */
   margin-top: 75px;
   z-index: +2;
 }
@@ -535,7 +537,7 @@ body {
     top: 0px;
   }
 
-  .x1 {
+  .cloud1 {
     -webkit-animation: animateCloud2 35s linear infinite;
     -moz-animation: animateCloud2 35s linear infinite;
     animation: animateCloud2 35s linear infinite;
@@ -543,7 +545,7 @@ body {
     margin-top: 30px;
   }
 
-  .x2 {
+  .cloud2 {
     -webkit-animation: animateCloud2 20s linear infinite;
     -moz-animation: animateCloud2 20s linear infinite;
     animation: animateCloud2 20s linear infinite;
