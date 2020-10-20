@@ -5,7 +5,7 @@ import WeatherDisplay from './WeatherDisplay'
 const PageContainer = () => {
    
     const [weather, setWeather] = useState([]);
-    const [viewWeather, setViewWeather] = useState(false)
+    const [viewWeather, setViewWeather] = useState(false);
     // const API_KEY = process.env.REACT_APP_APIKEY;
 
     async function fetchWeatherData(e) {
