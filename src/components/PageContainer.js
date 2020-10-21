@@ -6,15 +6,15 @@ const PageContainer = () => {
    
     const [weather, setWeather] = useState([]);
     const [viewWeather, setViewWeather] = useState(false);
-    // const API_KEY = process.env.REACT_APP_APIKEY;
+    const API_KEY = process.env.REACT_APP_APIKEY;
 
     async function fetchWeatherData(e) {
         let city = e.target.elements.city.value;
         let country = e.target.elements.country.value;
         e.preventDefault()
         e.target.reset()
-        // const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`)
-        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=b605fb71f74a08b77774a041c8a5fa91`)
+        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`)
+        // const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=b605fb71f74a08b77774a041c8a5fa91`)
         .then(res => res.json())
         .then(data => data)
         if(city && country){
