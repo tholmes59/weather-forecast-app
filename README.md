@@ -15,3 +15,11 @@ To install locally:
 Alternatively:
 
 Use the app by visiting [Weather Forecast App](https://my-weather-forecast-app.netlify.app/)
+
+## License
+
+The NHL Stats App is licensed under the [MIT license](https://opensource.org/licenses/MIT)
+
+## Code of Conduct
+
+Everyone interacting in the NHL Stats App project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
