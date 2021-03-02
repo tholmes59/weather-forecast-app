@@ -180,6 +180,12 @@ body {
   background: none;
 }
 
+#temp:hover{
+  cursor: pointer;
+  color: #f9e213;
+  font-weight: bold;
+}
+
 .description-container{
   /* grid-area: 1 / 2 / 2 / 3; */
   grid-area: desc;
