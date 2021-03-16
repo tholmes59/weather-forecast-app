@@ -6,12 +6,10 @@ import moment from 'moment';
 const WeatherDisplay = (props) => {
   
   const [fahrenheit, setFahrenheit] = useState(true);
-  const [celsius, setCelsius] = useState(false);
   
   const viewTemp = (e) => {
     e.preventDefault();
     setFahrenheit(!fahrenheit);
-    setCelsius(!celsius);
     
     let elm = document.getElementById("temp");
     if (elm.innerHTML === "view in °C") {
@@ -53,7 +51,7 @@ const WeatherDisplay = (props) => {
       <div className="line-4"></div>
       <div className="line-5"></div>
       <div className="line-6"></div>
-      
+
       {props.weather && (
         <p>
           {props.weather &&
@@ -72,8 +70,11 @@ const WeatherDisplay = (props) => {
       <div className="weather-display-container">
         {console.log(props)}
 
-        {fahrenheit ? <Fahrenheit weather={props.weather} /> : ""}
-        {celsius ? <Celsius weather={props.weather} /> : ""}
+        {fahrenheit ? (
+          <Fahrenheit weather={props.weather} />
+        ) : (
+          <Celsius weather={props.weather} />
+        )}
         {props.weather && (
           <div className="wind-container">
             {props.weather && (
@@ -122,7 +123,9 @@ const WeatherDisplay = (props) => {
         {props.weather && (
           <div className="description-container">
             <img src={image} alt="" />
-            {props.weather && <p>{props.weather.weather.map(x => x.description)}</p>}
+            {props.weather && (
+              <p>{props.weather.weather.map((x) => x.description)}</p>
+            )}
           </div>
         )}
         {props.error && <p>{props.error}</p>}
