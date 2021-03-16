@@ -4,20 +4,26 @@ import Celsius from './Celsius';
 import moment from 'moment';
 
 const WeatherDisplay = (props) => {
-  let now = new Date();
-  let timezone = props.weather && props.weather.timezone * 1000;
-  let utc = new Date(
-    now.getTime() + timezone + now.getTimezoneOffset() * 60000
-  );
+  
+  const [fahrenheit, setFahrenheit] = useState(true);
+  const [celsius, setCelsius] = useState(false);
+  
+  const viewTemp = (e) => {
+    e.preventDefault();
+    setFahrenheit(!fahrenheit);
+    setCelsius(!celsius);
+    
+    let elm = document.getElementById("temp");
+    if (elm.innerHTML === "view in °C") {
+      elm.innerHTML = "view in °F";
+    } else {
+      elm.innerHTML = "view in °C";
+    }
+  };
 
   let imageId = props.weather && props.weather.weather.map(x => x.icon);
   let image = `http://openweathermap.org/img/wn/${imageId}@2x.png`;
-  // const degToCompass = (num) => {
-  //     var val = Math.floor((num / 22.5) + 0.5);
-  //     var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-  //     return arr[(val % 16)];
-  // }
-
+    
   const degToCompass = (angle) => {
     const directions = [
       "↑ N",
@@ -31,26 +37,15 @@ const WeatherDisplay = (props) => {
     ];
     return directions[Math.round(angle / 45) % 8];
   };
-
-  const [fahrenheit, setFahrenheit] = useState(true);
-  const [celsius, setCelsius] = useState(false);
-
-  const viewTemp = (e) => {
-    e.preventDefault();
-    setFahrenheit(!fahrenheit);
-    setCelsius(!celsius);
-
-    let elm = document.getElementById("temp");
-    if (elm.innerHTML === "view in °C") {
-      elm.innerHTML = "view in °F";
-    } else {
-      elm.innerHTML = "view in °C";
-    }
-  };
+  
+  let now = new Date();
+  let timezone = props.weather && props.weather.timezone * 1000;
+  let utc = new Date(
+    now.getTime() + timezone + now.getTimezoneOffset() * 60000
+  );
 
   return (
     <div>
-      
       <div className="sun-container"></div>
       <div className="line-1"></div>
       <div className="line-2"></div>
