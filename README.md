@@ -9,7 +9,7 @@ Weather Forecast App is a web application that allows users to search check the 
 To install locally:
 
 1. Clone this repository
-2. Make sure you have the latest version of NPM installed
+2. Run `npm install` to make sure you have the latest version of NPM installed
 3. Run `npm start` in the terminal to run the app in the browser
 
 Alternatively:
